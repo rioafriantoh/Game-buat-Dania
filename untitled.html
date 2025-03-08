@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Romantis untuk Dania Shifa</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        #question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yes {
+            background-color: #ff4d4d;
+            color: white;
+        }
+        #no {
+            background-color: #ccc;
+            color: black;
+            position: absolute;
+        }
+        #message {
+            font-size: 22px;
+            color: #ff4d4d;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Romantis untuk Dania Shifa 💕</h1>
+    <p id="question">Dania Shifa, apakah kamu sayang aku?</p>
+    <button id="yes" class="btn" onclick="showLove()">Iya, aku sayang!</button>
+    <button id="no" class="btn" onmouseover="moveNo()">Tidak</button>
+    <p id="message"></p>
+
+    <script>
+        function showLove() {
+            document.getElementById('message').textContent = "Aku juga sayang kamu, Dania Shifa! ❤️";
+        }
+
+        function moveNo() {
+            const noButton = document.getElementById('no');
+            const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</body>
